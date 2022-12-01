@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity(name = "USER")
 @Getter
 @Setter
 public class UserEntity extends BaseEntity {
@@ -13,6 +13,19 @@ public class UserEntity extends BaseEntity {
 
     private String password;
 
-    private String userRolesASENUM;
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
